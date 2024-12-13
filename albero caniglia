@@ -1,0 +1,31 @@
+#include <iostream> #include "AlberoBinario.h"
+int main() {
+// Creare un albero con radice
+ AlberoBinario<int> albero;
+ albero.insRadice(20);
+ std::cout << "Radice inserita: 20" << std::endl;
+
+// inserisci  i nomi figli
+
+albero.insFiglioSinistro(0, 8);
+albero.insFiglioDestro(0, 24);
+ albero.insFiglioSinistro(1, 4);
+ albero.insFiglioDestro(1, 9);
+ albero.insFiglioSinistro(2, 42);
+albero.insFiglioDestro(2, 29);
+ std::cout << "Nodi figli inseriti." << std::endl;
+int nodo = 0;
+// Nodo a scelta (radice)
+ std::cout << "Figlio sinistro di " << nodo << ": " << albero.figlioSinistro(nodo) << std::endl;
+ std::cout << "Figlio destro di " << nodo << ": " << albero.figlioDestro(nodo) << std::endl;
+
+// rimozione nodo
+
+int nodo da togliere = 5;
+// Nodo foglia da rimuovere
+albero.rimuovi(nodoDaRimuovere);
+ std::cout << "Nodo " << nodoDaRimuovere << " rimosso." << std::endl;
+// Stampa della struttura albero
+albero.stampa();
+return 0;
+}
